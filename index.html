@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="calculator">
+    <div class="display">
+      <div id="operation" class="operation"></div>
+      <div id="result" class="result">0</div>
+    </div>
+    <div class="buttons">
+      <!-- Botões de controle -->
+      <div>
+        <button onclick="clearDisplay()">C</button>
+        <button onclick="memoryClear()">CLM</button>
+        <button onclick="calculateSquareRoot()">√</button>
+        <button onclick="togglePower()">ON/OFF</button>
+        </div>
+      <!-- Botões de memória e operações básicas -->
+      <div class="linha">
+        <button onclick="toggleSign()">+/-</button>
+        <button onclick="memoryRecall()">RM</button>
+        <button onclick="memoryAdd()">M+</button>
+        <button onclick="memorySubtract()">M-</button>     
+        <button onclick="calculateInverse()">1/x</button>
+        <button onclick="calculateSquare()">x²</button>
+        <button onclick="setOperation('/')">/</button>
+        
+      </div>
+      <!-- Botões numéricos e operações -->
+      <div>
+        <button onclick="pressKey('7')">7</button>
+        <button onclick="pressKey('8')">8</button>
+        <button onclick="pressKey('9')">9</button>
+        <button onclick="setOperation('*')">*</button>       
+      </div>
+      <div>
+        <button onclick="pressKey('4')">4</button>
+        <button onclick="pressKey('5')">5</button>
+        <button onclick="pressKey('6')">6</button>
+        <button onclick="setOperation('-')">-</button>
+      </div>
+      <div>
+        <button onclick="pressKey('1')">1</button>
+        <button onclick="pressKey('2')">2</button>
+        <button onclick="pressKey('3')">3</button>
+        <button onclick="setOperation('+')">+</button>
+      </div>
+      <!-- Botões adicionais -->
+      <div>
+        <button onclick="pressKey('0')">0</button>
+        <button onclick="pressKey('00')">00</button>
+        <button onclick="pressKey('.')">.</button>
+        <button onclick="calculate()">=</button>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
